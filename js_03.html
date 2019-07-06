@@ -2,6 +2,9 @@
 <html>
 
 <head>
+	<!-- LET'S SAY WE DON'T WANT TO USE THE NATIVE ALERT BOX THOUGH, BECAUSE THAT FEATURE
+	MAY BE DISABLED ON SOME USERS' BROWSERS, NOT TO MENTION IT'S KIND OF UGLY. LET'S
+	MAKE OUR OWN, PRETTIER ALERT MESSAGE! -->
 	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
 	<title>Blake's Website</title>
 
@@ -19,6 +22,7 @@
 			color: aqua
 		}
 	</style>
+
 </head>
 
 <body>
@@ -29,7 +33,21 @@
 
 	<h2>💯 Favorite interests</h2>
 
-	<img src="images/code.jpg" alt="Zoomed-in picture of HTML code on a screen.">
+	<!-- STEP 3 RELEVANT PART, 1/4 -->
+	<!--
+		Delete onclick alert.
+	-->
+	<img src="images/code.jpg" alt="Zoomed-in picture of HTML code on a screen." onclick="">
+	<!-- /STEP 3 RELEVANT PART -->
+
+	<!-- STEP 3 RELEVANT PART, 3/4 -->
+	<!--
+		Create an element for the message so we don't have to use alerts anymore. Teach
+		about id selectors in css and hint that we're going to use this id in our js
+		as well in order io identify the element.
+	-->
+	<p id="img-message-1">That is some awesome code!</p>
+	<!-- /STEP 3 RELEVANT PART -->
 
 	<ul>
 		<li><a href="https://css-tricks.com/">Web development</a></li>
@@ -39,7 +57,19 @@
 
 	<h2>🎥 Favorite movies / TV shows</h2>
 
-	<img src="images/tv.jpg" alt="An old, dusty vintage TV.">
+	<!-- STEP 3 RELEVANT PART, 2/4 -->
+	<!--
+		Delete onclick alert.
+	-->
+	<img src="images/tv.jpg" alt="An old, dusty vintage TV." onclick="">
+	<!-- /STEP 3 RELEVANT PART -->
+
+	<!-- STEP 3 RELEVANT PART, 4/4 -->
+	<!--
+		Create the other image message.
+	-->
+	<p id="img-message-2">I love old TV sets!</p>
+	<!-- /STEP 3 RELEVANT PART -->
 
 	<ul>
 		<li>
@@ -54,8 +84,6 @@
 	<h2>🧠 What I hope to learn about at Hackability Camp</h2>
 
 	<p>I hope to learn how to be a better teacher.</p>
-
-
 </body>
 
 </html>
