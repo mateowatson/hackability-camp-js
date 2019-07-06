@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<!--
+		WE'RE KIND OF BACK TO WHERE WE STARTED. OUR CUSTOM FUNCTION DOES EXACTLY THE SAME
+		THING AS THE NATIVE alert FUNCTION WE USED AT THE BEGINNING.
+
+		BUT WHY MIGHT WE BE ABLE TO DO MORE WITH OUR CURRENT SETUP? WHAT IS THE BENEFIT?
+
+		CORRECT! ... WE CAN EXPAND OUR FUNCTION INTO MULTIPLE LINES OF CODE.
+
+		INSTEAD OF PASSING IN 
+	-->
+	
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<title>Blake's Website</title>
+
+	<style>
+		body {
+			background-color: midnightblue;
+			color: white;
+		}
+
+		h1 {
+			color: lime;
+		}
+
+		a {
+			color: aqua
+		}
+	</style>
+
+</head>
+
+<body>
+	<h1>Blake's Website</h1>
+
+	<p>I'm a web developer. I code mostly in HTML, CSS, JavaScript, and PHP. I ♥ <a
+			href="https://wordpress.org/">WordPress</a>.</p>
+
+	<h2>💯 Favorite interests</h2>
+
+	<img src="images/code.jpg" alt="Zoomed-in picture of HTML code on a screen." onclick="alertImg('That is some awesome code.')">
+
+
+	<ul>
+		<li><a href="https://css-tricks.com/">Web development</a></li>
+		<li><a href="https://dnd.wizards.com/">Dungeons &amp; Dragons</a></li>
+		<li><a href="https://en.wikipedia.org/wiki/Assistive_technology">Assistive technology</a></li>
+	</ul>
+
+	<h2>🎥 Favorite movies / TV shows</h2>
+
+	<img src="images/tv.jpg" alt="An old, dusty vintage TV." onclick="alertImg('I love retro TVs.')">
+
+	<ul>
+		<li>
+			<a href="https://www.imdb.com/title/tt4574334/">
+				Stranger Things
+			</a>
+		</li>
+		<li><a href="https://www.imdb.com/title/tt0083399/">Cheers</a></li>
+		<li><a href="https://www.imdb.com/title/tt0095016">Diehard</a></li>
+	</ul>
+
+	<h2>🧠 What I hope to learn about at Hackability Camp</h2>
+
+	<p>I hope to learn how to be a better teacher.</p>
+
+	<script>
+		function alertImg(message) {
+			alert(message);
+		}
+	</script>
+</body>
+
+</html>

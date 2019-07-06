@@ -2,7 +2,10 @@
 <html>
 
 <head>
-	<!--  -->
+	<!--
+		LET'S CONSOLIDATE OUR FUNCTIONS INTO ONE, SINCE THEY BOTH PRETTY MUCH DO THE
+		SAME THING. WE DO THIS BY PASSING PARAMETERS IN THE FUNCTION PARENTHESES.
+	-->
 	
 	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
 	<title>Blake's Website</title>
@@ -32,7 +35,12 @@
 
 	<h2>💯 Favorite interests</h2>
 
-	<img src="images/code.jpg" alt="Zoomed-in picture of HTML code on a screen." onclick="alertImgCode()">
+	<!--
+		STEP 2/5
+
+		Call our new function, passing in what we want to alert for this image.
+	-->
+	<img src="images/code.jpg" alt="Zoomed-in picture of HTML code on a screen." onclick="alertImg('That is some awesome code.')">
 
 
 	<ul>
@@ -43,7 +51,12 @@
 
 	<h2>🎥 Favorite movies / TV shows</h2>
 
-	<img src="images/tv.jpg" alt="An old, dusty vintage TV." onclick="alertImgTvs()">
+	<!--
+		STEP 3/5
+
+		Do the same here.
+	-->
+	<img src="images/tv.jpg" alt="An old, dusty vintage TV." onclick="alertImg('I love retro TVs.')">
 
 	<ul>
 		<li>
@@ -59,9 +72,15 @@
 
 	<p>I hope to learn how to be a better teacher.</p>
 
+	<!--
+		STEP 1/5
+
+		Instead of two functions, just one that accepts an argument, which holds whatever
+		we pass when we call the function.
+	-->
 	<script>
-		function alertImgCode() {
-			alert('That is some awesome code.');
+		function alertImg(message) {
+			alert(message);
 		}
 	</script>
 </body>
