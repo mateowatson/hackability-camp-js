@@ -2,12 +2,9 @@
 <html>
 
 <head>
-	<!-- LET'S SAY WE DON'T WANT TO USE THE NATIVE ALERT BOX THOUGH, BECAUSE THAT FEATURE
-	MAY BE DISABLED ON SOME USERS' BROWSERS, NOT TO MENTION IT'S KIND OF UGLY. LET'S
-	MAKE OUR OWN, PRETTIER ALERT MESSAGE! -->
+	<!-- LET'S ADD STYLES TO OUR IMAGE MESSAGES/ALERTS SO THAT IT SHOWS UP IN THE MIDDLE,
+	MORE LIKE AN ALERT DOES. -->
 
-	<!-- These steps are just cleaning up by deleting the alerts and adding the HTML elements -->
-	
 	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
 	<title>Blake's Website</title>
 
@@ -24,6 +21,25 @@
 		a {
 			color: aqua
 		}
+
+		/* RELEVANT PART, 1/1
+			- Add #img-message-1 first and all it's styles, and then show how to tack on
+			  #img-message-2 by using a comma.
+			- Show difference between absolute and fixed positions.
+			- Notice that once we add the styles to #img-message-2, that message is now
+			  "on top of" the other one. Now it's time to implement the next step: a js
+			  function that will toggle these elements only when you click the images!
+		*/
+		#img-message-1, #img-message-2 {
+												  /* preferred order maybe */
+			background-color: rebeccapurple; 	/* 6 */
+			padding: 42px; 						  /* 5 */
+			width: 50%; 						  /* 4 */
+			position: fixed; 					  /* 1 */
+			left: 25%; 							  /* 2 */
+			top: 25%; 							  /* 3 */
+		}
+
 	</style>
 
 </head>
@@ -36,21 +52,9 @@
 
 	<h2>💯 Favorite interests</h2>
 
-	<!-- STEP 3 RELEVANT PART, 1/4 -->
-	<!--
-		Delete onclick alert.
-	-->
 	<img src="images/code.jpg" alt="Zoomed-in picture of HTML code on a screen." onclick="">
-	<!-- /STEP 3 RELEVANT PART -->
 
-	<!-- STEP 3 RELEVANT PART, 3/4 -->
-	<!--
-		Create an element for the message so we don't have to use alerts anymore. Teach
-		about id selectors in css and hint that we're going to use this id in our js
-		as well in order io identify the element.
-	-->
 	<p id="img-message-1">That is some awesome code!</p>
-	<!-- /STEP 3 RELEVANT PART -->
 
 	<ul>
 		<li><a href="https://css-tricks.com/">Web development</a></li>
@@ -60,19 +64,9 @@
 
 	<h2>🎥 Favorite movies / TV shows</h2>
 
-	<!-- STEP 3 RELEVANT PART, 2/4 -->
-	<!--
-		Delete onclick alert.
-	-->
 	<img src="images/tv.jpg" alt="An old, dusty vintage TV." onclick="">
-	<!-- /STEP 3 RELEVANT PART -->
 
-	<!-- STEP 3 RELEVANT PART, 4/4 -->
-	<!--
-		Create the other image message.
-	-->
 	<p id="img-message-2">I love old TV sets!</p>
-	<!-- /STEP 3 RELEVANT PART -->
 
 	<ul>
 		<li>
