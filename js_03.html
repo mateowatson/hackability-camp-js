@@ -2,11 +2,8 @@
 <html>
 
 <head>
-	<!-- LET'S SAY WE DON'T WANT TO USE THE NATIVE ALERT BOX THOUGH, BECAUSE THAT FEATURE
-	MAY BE DISABLED ON SOME USERS' BROWSERS, NOT TO MENTION IT'S KIND OF UGLY. LET'S
-	MAKE OUR OWN, PRETTIER ALERT MESSAGE! -->
-
-	<!-- These steps are just cleaning up by deleting the alerts and adding the HTML elements -->
+	<!-- LET'S DO THE SAME THING, BUT INSTEAD OF ADDING THE JAVASCRIPT CODE INLINE,
+	LET'S SEPARATE IT OUT INTO IT'S OWN SCRIPT TAG. -->
 	
 	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
 	<title>Blake's Website</title>
@@ -36,21 +33,17 @@
 
 	<h2>💯 Favorite interests</h2>
 
-	<!-- STEP 3 RELEVANT PART, 1/4 -->
 	<!--
-		Delete onclick alert.
-	-->
-	<img src="images/code.jpg" alt="Zoomed-in picture of HTML code on a screen." onclick="">
-	<!-- /STEP 3 RELEVANT PART -->
+		STEP 1/5
 
-	<!-- STEP 3 RELEVANT PART, 3/4 -->
-	<!--
-		Create an element for the message so we don't have to use alerts anymore. Teach
-		about id selectors in css and hint that we're going to use this id in our js
-		as well in order io identify the element.
+		- Instead of writing the alert and all of the content that goes with it in the
+		element itself, we're going to tell the onlick, "Hey, run this custom function for
+		us," which we are going to write in the next step, at the end of the document.
+		- This is what is referred to as "calling" a function, and in JavaScript, and many
+		other programming languages, calling a function requires parentheses.
 	-->
-	<p id="img-message-1">That is some awesome code!</p>
-	<!-- /STEP 3 RELEVANT PART -->
+	<img src="images/code.jpg" alt="Zoomed-in picture of HTML code on a screen." onclick="alertImgCode()">
+
 
 	<ul>
 		<li><a href="https://css-tricks.com/">Web development</a></li>
@@ -60,19 +53,13 @@
 
 	<h2>🎥 Favorite movies / TV shows</h2>
 
-	<!-- STEP 3 RELEVANT PART, 2/4 -->
 	<!--
-		Delete onclick alert.
-	-->
-	<img src="images/tv.jpg" alt="An old, dusty vintage TV." onclick="">
-	<!-- /STEP 3 RELEVANT PART -->
+		STEP 3/5
 
-	<!-- STEP 3 RELEVANT PART, 4/4 -->
-	<!--
-		Create the other image message.
+		We want call a function nn the onclick even that alerts 'I love retro TVs.'
+		Let's call it alertImgTvs.
 	-->
-	<p id="img-message-2">I love old TV sets!</p>
-	<!-- /STEP 3 RELEVANT PART -->
+	<img src="images/tv.jpg" alt="An old, dusty vintage TV." onclick="alertImgTvs()">
 
 	<ul>
 		<li>
@@ -87,6 +74,24 @@
 	<h2>🧠 What I hope to learn about at Hackability Camp</h2>
 
 	<p>I hope to learn how to be a better teacher.</p>
+
+	<!--
+		STEP 2/5
+
+		- This is how you can add a script to your page.
+		- It's best practice to place any scripts after the document content so that if
+		something goes wrong with our JavaScript, it won't prevent our page from loading.
+		- We are going to write a function instead of just adding the alert straight. A
+		function is like a bucket of code we can use whenever we want.
+		- Intro to camelCasing
+	-->
+	<script>
+		function alertImgCode() {
+			alert('That is some awesome code.');
+		}
+
+		// STEP 4/5 - CHALLENGE!!! Write the function below.
+	</script>
 </body>
 
 </html>
