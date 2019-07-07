@@ -2,95 +2,95 @@
 <html>
 
 <head>
-	<!-- LET'S DO THE SAME THING, BUT INSTEAD OF ADDING THE JAVASCRIPT CODE INLINE,
-	LET'S SEPARATE IT OUT INTO IT'S OWN SCRIPT TAG. -->
-	
-	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
-	<title>Blake's Website</title>
+    <!-- LET'S DO THE SAME THING, BUT INSTEAD OF ADDING THE JAVASCRIPT CODE INLINE,
+    LET'S SEPARATE IT OUT INTO IT'S OWN SCRIPT TAG. -->
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title>Blake's Website</title>
 
-	<style>
-		body {
-			background-color: midnightblue;
-			color: white;
-		}
+    <style>
+        body {
+            background-color: midnightblue;
+            color: white;
+        }
 
-		h1 {
-			color: lime;
-		}
+        h1 {
+            color: lime;
+        }
 
-		a {
-			color: aqua
-		}
-	</style>
+        a {
+            color: aqua
+        }
+    </style>
 
 </head>
 
 <body>
-	<h1>Blake's Website</h1>
+    <h1>Blake's Website</h1>
 
-	<p>I'm a web developer. I code mostly in HTML, CSS, JavaScript, and PHP. I ♥ <a href="https://wordpress.org/">WordPress</a>.</p>
+    <p>I'm a web developer. I code mostly in HTML, CSS, JavaScript, and PHP. I ♥ <a href="https://wordpress.org/">WordPress</a>.</p>
 
-	<h2>💯 Favorite interests</h2>
+    <h2>💯 Favorite interests</h2>
 
-	<!--
-		STEP 1/4
+    <!--
+        STEP 1/4
 
-		- Instead of writing the alert and all of the content that goes with it in the
-		element itself, we're going to tell the onlick, "Hey, run this custom function for
-		us," which we are going to write in the next step, at the end of the document.
-		- This is what is referred to as "calling" a function, and in JavaScript, and many
-		other programming languages, calling a function requires parentheses.
-	-->
-	<img src="images/code.jpg" alt="Zoomed-in picture of HTML code on a screen." onclick="alertCodeImage()">
+        - Instead of writing the alert and all of the content that goes with it in the
+        element itself, we're going to tell the onlick, "Hey, run this custom function for
+        us," which we are going to write in the next step, at the end of the document.
+        - This is what is referred to as "calling" a function, and in JavaScript, and many
+        other programming languages, calling a function requires parentheses.
+    -->
+    <img src="images/code.jpg" alt="Zoomed-in picture of HTML code on a screen." onclick="alertCodeImage()">
 
 
-	<ul>
-		<li><a href="https://css-tricks.com/">Web development</a></li>
-		<li><a href="https://dnd.wizards.com/">Dungeons &amp; Dragons</a></li>
-		<li><a href="https://en.wikipedia.org/wiki/Assistive_technology">Assistive technology</a></li>
-	</ul>
+    <ul>
+        <li><a href="https://css-tricks.com/">Web development</a></li>
+        <li><a href="https://dnd.wizards.com/">Dungeons &amp; Dragons</a></li>
+        <li><a href="https://en.wikipedia.org/wiki/Assistive_technology">Assistive technology</a></li>
+    </ul>
 
-	<h2>🎥 Favorite movies / TV shows</h2>
+    <h2>🎥 Favorite movies / TV shows</h2>
 
-	<!--
-		STEP 3/4
+    <!--
+        STEP 3/4
 
-		We want to call a function on the onclick event that alerts 'I love retro TVs.'
-		Let's call it alertTVImage.
-	-->
-	<img src="images/tv.jpg" alt="An old, dusty vintage TV." onclick="alertTVImage()">
+        We want to call a function on the onclick event that alerts 'I love retro TVs.'
+        Let's call it alertTVImage.
+    -->
+    <img src="images/tv.jpg" alt="An old, dusty vintage TV." onclick="alertTVImage()">
 
-	<ul>
-		<li>
-			<a href="https://www.imdb.com/title/tt4574334/">
-				Stranger Things
-			</a>
-		</li>
-		<li><a href="https://www.imdb.com/title/tt0083399/">Cheers</a></li>
-		<li><a href="https://www.imdb.com/title/tt0095016">Diehard</a></li>
-	</ul>
+    <ul>
+        <li>
+            <a href="https://www.imdb.com/title/tt4574334/">
+                Stranger Things
+            </a>
+        </li>
+        <li><a href="https://www.imdb.com/title/tt0083399/">Cheers</a></li>
+        <li><a href="https://www.imdb.com/title/tt0095016">Diehard</a></li>
+    </ul>
 
-	<h2>🧠 What I hope to learn about at Hackability Camp</h2>
+    <h2>🧠 What I hope to learn about at Hackability Camp</h2>
 
-	<p>I hope to learn how to be a better teacher.</p>
+    <p>I hope to learn how to be a better teacher.</p>
 
-	<!--
-		STEP 2/4
+    <!--
+        STEP 2/4
 
-		- This is how you can add a script to your page.
-		- It's best practice to place any scripts after the document content so that if
-		something goes wrong with our JavaScript, it won't prevent our page from loading.
-		- We are going to write a function instead of just adding the alert straight. A
-		function is like a bucket of code we can use whenever we want.
-		- Intro to camelCasing
-	-->
-	<script>
-		function alertCodeImage() {
-			alert('That is some awesome code.');
-		}
+        - This is how you can add a script to your page.
+        - It's best practice to place any scripts after the document content so that if
+        something goes wrong with our JavaScript, it won't prevent our page from loading.
+        - We are going to write a function instead of just adding the alert straight. A
+        function is like a bucket of code we can use whenever we want.
+        - Intro to camelCasing
+    -->
+    <script>
+        function alertCodeImage() {
+            alert('That is some awesome code.');
+        }
 
-		// STEP 4/4 - CHALLENGE!!! Write the function below.
-	</script>
+        // STEP 4/4 - CHALLENGE!!! Write the function below.
+    </script>
 </body>
 
 </html>

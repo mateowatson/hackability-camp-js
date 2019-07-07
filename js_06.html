@@ -2,111 +2,109 @@
 <html>
 
 <head>
-	<!--
-		CHALLENGE!!! (if we have time)
+    <!--
+        CHALLENGE!!! (if we have time)
 
-		WRITE YET ANOTHER BUTTON THAT WILL TOGGLE SOME OTHER CSS PROPERTY OF SOME OTHER
-		ELEMENT ON THE PAGE.
+        WRITE YET ANOTHER BUTTON THAT WILL TOGGLE SOME OTHER CSS PROPERTY OF SOME OTHER
+        ELEMENT ON THE PAGE.
 
-		1. Add a button and add what text you want the button to have on it.
-		2. Add the onclick attribute to the button, and call the function you will write
-		3. Add the function to your <script> tag.
-			1. Use document.getElementsByTagName to get the object for the element you
-			   want to change. Use console.log and check your web inspector to check and
-			   make sure you are getting what you expect
-			2. Change a CSS property, such as width, height, color, backgroundColor, etc...
-			3. Add an if statement so that the button will toggle the CSS property instead
-			   of just changing it one way.
-	-->
-	
-	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
-	<title>Blake's Website</title>
+        1. Add a button and add what text you want the button to have on it.
+        2. Add the onclick attribute to the button, and call the function you will write
+        3. Add the function to your <script> tag.
+            1. Use document.getElementsByTagName to get the object for the element you
+               want to change. Use console.log and check your web inspector to check and
+               make sure you are getting what you expect
+            2. Change a CSS property, such as width, height, color, backgroundColor, etc...
+            3. Add an if statement so that the button will toggle the CSS property instead
+               of just changing it one way.
+    -->
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title>Blake's Website</title>
 
-	<style>
-		body {
-			background-color: midnightblue;
-			color: white;
-		}
+    <style>
+        body {
+            background-color: midnightblue;
+            color: white;
+        }
 
-		h1 {
-			color: lime;
-		}
+        h1 {
+            color: lime;
+        }
 
-		a {
-			color: aqua
-		}
-	</style>
+        a {
+            color: aqua
+        }
+    </style>
 
 </head>
 
-<body>
-	<h1>Blake's Website</h1>
+<body id="body">
+    <h1 id="h1">Blake's Website</h1>
 
-	<button onclick="changeBackground()">Change background</button>
+    <button onclick="changeBackground()">Change background</button>
 
-	<button onclick="changeHeading()">Change heading</button>
+    <button onclick="changeHeading()">Change heading</button>
 
-	<p>I'm a web developer. I code mostly in HTML, CSS, JavaScript, and PHP. I ♥ <a href="https://wordpress.org/">WordPress</a>.</p>
+    <p>I'm a web developer. I code mostly in HTML, CSS, JavaScript, and PHP. I ♥ <a href="https://wordpress.org/">WordPress</a>.</p>
 
-	<h2>💯 Favorite interests</h2>
+    <h2>💯 Favorite interests</h2>
 
-	<img src="images/code.jpg" alt="Zoomed-in picture of HTML code on a screen." onclick="alertCodeImage()">
+    <img src="images/code.jpg" alt="Zoomed-in picture of HTML code on a screen." onclick="alertCodeImage()">
 
-	<ul>
-		<li><a href="https://css-tricks.com/">Web development</a></li>
-		<li><a href="https://dnd.wizards.com/">Dungeons &amp; Dragons</a></li>
-		<li><a href="https://en.wikipedia.org/wiki/Assistive_technology">Assistive technology</a></li>
-	</ul>
+    <ul>
+        <li><a href="https://css-tricks.com/">Web development</a></li>
+        <li><a href="https://dnd.wizards.com/">Dungeons &amp; Dragons</a></li>
+        <li><a href="https://en.wikipedia.org/wiki/Assistive_technology">Assistive technology</a></li>
+    </ul>
 
-	<h2>🎥 Favorite movies / TV shows</h2>
+    <h2>🎥 Favorite movies / TV shows</h2>
 
-	<img src="images/tv.jpg" alt="An old, dusty vintage TV." onclick="alertTVImage()">
+    <img src="images/tv.jpg" alt="An old, dusty vintage TV." onclick="alertTVImage()">
 
-	<ul>
-		<li>
-			<a href="https://www.imdb.com/title/tt4574334/">
-				Stranger Things
-			</a>
-		</li>
-		<li><a href="https://www.imdb.com/title/tt0083399/">Cheers</a></li>
-		<li><a href="https://www.imdb.com/title/tt0095016">Diehard</a></li>
-	</ul>
+    <ul>
+        <li>
+            <a href="https://www.imdb.com/title/tt4574334/">
+                Stranger Things
+            </a>
+        </li>
+        <li><a href="https://www.imdb.com/title/tt0083399/">Cheers</a></li>
+        <li><a href="https://www.imdb.com/title/tt0095016">Diehard</a></li>
+    </ul>
 
-	<h2>🧠 What I hope to learn about at Hackability Camp</h2>
+    <h2>🧠 What I hope to learn about at Hackability Camp</h2>
 
-	<p>I hope to learn how to be a better teacher.</p>
+    <p>I hope to learn how to be a better teacher.</p>
 
-	<script>
-		function alertCodeImage() {
-			alert('That is some awesome code.');
-		}
+    <script>
+        function alertCodeImage() {
+            alert('That is some awesome code.');
+        }
 
-		function alertTVImage() {
-			alert('I love retro TVs.');
-		}
+        function alertTVImage() {
+            alert('I love retro TVs.');
+        }
 
-		function changeBackground() {
-			var bodyElement = document.getElementsByTagName('body')[0];
+        function changeBackground() {
+            var bodyElement = document.getElementById('body');
+            if(bodyElement.style.backgroundColor !== 'firebrick') {
+                bodyElement.style.backgroundColor = 'firebrick';
+            } else {
+                bodyElement.style.backgroundColor = 'midnightblue';
+            }
+        }
 
-			if(bodyElement.style.backgroundColor !== 'firebrick') {
-				bodyElement.style.backgroundColor = 'firebrick';
-			} else {
-				bodyElement.style.backgroundColor = 'midnightblue';
-			}
-			
-		}
+        function changeHeading() {
+            var headingElement = document.getElementById('h1');
 
-		function changeHeading() {
-			var headingElement = document.getElementsByTagName('h1')[0];
+            if(headingElement.style.color !== 'khaki') {
+                headingElement.style.color = 'khaki';
+            } else {
+                headingElement.style.color = 'lime';
+            }
+        }
 
-			if(headingElement.style.color !== 'khaki') {
-				headingElement.style.color = 'khaki';
-			} else {
-				headingElement.style.color = 'lime';
-			}
-		}
-
-	</script>
+    </script>
 </body>
 
 </html>
